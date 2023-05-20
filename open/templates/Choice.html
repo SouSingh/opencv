@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Image/PDF Scanner</title>
+</head>
+<body>
+    <div class="flex flex-col h-screen my-auto items-center mt-24 bg-cover">
+        <div>
+            <h1 class="text-4xl font-bold text-black">Choose one of these</h1>
+        </div>
+        <div class="flex justify-between p-4 gap-16 pt-12">
+            <div class="bg-green-400 px-5 py-2 border border-green-400 rounded-2xl text-green-800 hover:text-white hover:bg-black">
+                <h3><a href="{% url 'home' %}">
+                    Image
+                </a></h3>
+            </div>
+            <div class="bg-white px-5 py-2 border border-black rounded-2xl text-black hover:text-green-800 hover:bg-green-400">
+                <h3><a href="{% url 'pdf' %}">
+                    PDF
+                </a></h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

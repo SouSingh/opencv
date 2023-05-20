@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+    <h1>Welcome to PDF to text!</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="image">Upload an PDF:</label>
+        <input type="file" name="pdf" >
+        <button type="submit">Process pdf</button>
+    </form>
+    {% if text %}
+      <p>{{text}}</p>
+    {% endif %}
+</body>
+</html>

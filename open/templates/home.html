@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+    <h1>Welcome to Image to Text!</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="image">Upload an image:</label>
+        <input type="file" name="image" >
+        <button type="submit">Process Image</button>
+    </form>
+    {% if text %}
+      <p>{{text}}</p>
+    {% endif %}
+</body>
+</html>
